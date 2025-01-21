@@ -1,2 +1,2 @@
-# UartIP_Verification
-UartIP Verification
+# UART IP verification by using UVM
+COMING SOON!
