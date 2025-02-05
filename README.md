@@ -96,7 +96,7 @@ The uartip_environment consists of multiple verification blocks:
 - Responsible for transmitting data to the UART IP via TX.
 - Receives data transmitted by the UART IP via RX.
 - Sends transmisting and Received values and transaction details to the scoreboard for verification.
-  
+**Note: the uart agent has been developed using the UART VIP. Please refer to the following article: "[uart validate](https://github.com/huynv1212/UartVIP_Validate.git)" to learn more**
 **ahb_agent**
 
 - Reads and writes register values to configure UART IP.
