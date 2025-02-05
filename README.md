@@ -50,5 +50,37 @@ Tools and Methodology Used
 - 
 ## Verification Structure Design
 Below is a picture describing the Testbench structure to verify the VIP
-![Testbench structure to verify the VIP](Structure_env.png)
-  
+
+![Testbench structure to verify the VIP](uartip_verification_structure-1.png)
+
+The UART IP Verification Environment is designed based on UVM (Universal Verification Methodology) to ensure the correctness and reliability of the UART IP. This environment includes various components responsible for generating test cases, driving stimulus, monitoring transactions, and verifying the transmitted and received data
+
+Testbench
+
+The testbench serves as the foundation of the verification environment. It includes:
+
+- Multiple interfaces that communicate with the DUT (Device Under Test).
+- Initialization of input and output values within these interfaces.
+- A clock generator that supplies the system clock
+
+uartip_test
+
+The uartip_test class is responsible for managing the test execution. It includes:
+
+- uart_config: Defines the UART configurations (such as baud rate, data bits, stop bits, etc.).
+- Creates test scenarios by setting up the specific test cases to be run.
+- Uartip_environment, which serves as the simulation environment and contains all essential verification components.
+
+uartip_environment
+
+The uartip_environment consists of multiple verification blocks:
+
+"uartip_reg_block"
+
+- Manages the registers of the UART IP.
+- Handles register read and write operations.
+
+"uartip_Adapter & uartip_Predictor"
+
+- uartip_Adapter updates the read/write values into reg_model (uartip_reg_block).
+- uartip_Predictor predicts expected results based on input values and ensures the DUT functions correctly.
