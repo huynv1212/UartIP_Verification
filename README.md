@@ -55,7 +55,7 @@ Below is a picture describing the Testbench structure to verify the VIP
 
 The UART IP Verification Environment is designed based on UVM (Universal Verification Methodology) to ensure the correctness and reliability of the UART IP. This environment includes various components responsible for generating test cases, driving stimulus, monitoring transactions, and verifying the transmitted and received data
 
-Testbench
+**Testbench**
 
 The testbench serves as the foundation of the verification environment. It includes:
 
@@ -63,7 +63,7 @@ The testbench serves as the foundation of the verification environment. It inclu
 - Initialization of input and output values within these interfaces.
 - A clock generator that supplies the system clock
 
-uartip_test
+**uartip_test**
 
 The uartip_test class is responsible for managing the test execution. It includes:
 
@@ -71,16 +71,43 @@ The uartip_test class is responsible for managing the test execution. It include
 - Creates test scenarios by setting up the specific test cases to be run.
 - Uartip_environment, which serves as the simulation environment and contains all essential verification components.
 
-uartip_environment
+**uartip_environment**
 
 The uartip_environment consists of multiple verification blocks:
 
-"uartip_reg_block"
+**uartip_reg_block**
 
 - Manages the registers of the UART IP.
 - Handles register read and write operations.
 
-"uartip_Adapter & uartip_Predictor"
+**uartip_Adapter & uartip_Predictor**
 
 - uartip_Adapter updates the read/write values into reg_model (uartip_reg_block).
 - uartip_Predictor predicts expected results based on input values and ensures the DUT functions correctly.
+
+**uartip_Scoreboard**
+
+- Collects transactions from ahb_monitor and uart_monitor.
+- Compares actual vs. expected results to verify data integrity in both transmission and reception processes.
+- Performs functional coverage analysis to ensure the test scenarios cover all required features.
+
+**uart_agent**
+
+- Responsible for transmitting data to the UART IP via TX.
+- Receives data transmitted by the UART IP via RX.
+- Sends transmisting and Received values and transaction details to the scoreboard for verification.
+  
+**ahb_agent**
+
+- Reads and writes register values to configure UART IP.
+- Ensures the UART IP correctly executes transmission and reception operations.
+- Sends register values and transaction details to the scoreboard for verification.
+
+## Verification Plan Design
+COMING SOON!
+## Verification Environment Design and Develop
+COMING SOON!
+## Simulation and Waveform
+COMING SOON!
+## Conclusion and Acknowledgment
+COMING SOON!
