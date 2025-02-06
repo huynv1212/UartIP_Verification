@@ -47,7 +47,7 @@ Tools and Methodology Used
 - Language: SystemVerilog for writing testbenches and verification components.
 - Methodology: UVM for building a structured and reusable verification environment.
 - EDA Tool: QuestaSim for simulation and debugging.
-- 
+
 ## Verification Structure Design
 Below is a picture describing the Testbench structure to verify the UART IP.
 
