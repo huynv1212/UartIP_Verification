@@ -49,7 +49,7 @@ Tools and Methodology Used
 - EDA Tool: QuestaSim for simulation and debugging.
 - 
 ## Verification Structure Design
-Below is a picture describing the Testbench structure to verify the VIP
+Below is a picture describing the Testbench structure to verify the UART IP.
 
 ![Testbench structure to verify the VIP](uartip_verification_structure-1.png)
 
