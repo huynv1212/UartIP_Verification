@@ -106,7 +106,7 @@ The uartip_environment consists of multiple verification blocks:
 - Sends register values and transaction details to the scoreboard for verification.
 
 ## Verification Plan Design
-COMING SOON!
+For the full details of the Verification Plan, you can access the complete document [Verificaiton Plan](https://github.com/huynv1212/UartIP_Verification/blob/ba78200ccb3f66da7c5c444c9d1d400a43e3d4c2/VPlan_UART_IP.pdf).
 ## Verification Environment Design and Develop
 COMING SOON!
 ## Simulation and Waveform
